@@ -26,7 +26,7 @@ public class NSum {
 
         // if the smallest number is greater than the sum, then there is no point proceeding.
         // no solution can be arrived with given numbers
-        if(sum == 0 || sum < minElement(numbers) || n==0) {
+        if(sum == 0 || sum < getMinElement(numbers) || n==0) {
             return null;
         }
 
@@ -57,7 +57,7 @@ public class NSum {
             // recursively call sub-problem and find the result for sub-problem. we need to find a solution from sub-problem
             // that adds with the numbers[i] to form the sum. the recursion should be patterned as
             // nsome(difference, subset of numbers without number[i], n-1);
-            List<List<Integer>> subResult = nsome(sum - numbers[i], subSetWithout(numbers, numbers[i]), n-1);
+            List<List<Integer>> subResult = nsome(sum - numbers[i], getSubsetExcluding(numbers, numbers[i]), n-1);
 
             // if sub-result found, then create combinations of sub-results items with current number[i] and add to result
             if(subResult!=null && subResult.size() > 0) {
@@ -79,7 +79,7 @@ public class NSum {
      * @param number - number to be excluded
      * @return
      */
-    private static int[] subSetWithout(int[] source, int number) {
+    private static int[] getSubsetExcluding(int[] source, int number) {
         int[] targetArray = new int[source.length - 1];
         boolean omitted = false;
 
@@ -101,7 +101,7 @@ public class NSum {
      * @param numbers
      * @return
      */
-    private static int minElement(int[] numbers) {
+    private static int getMinElement(int[] numbers) {
 
         if(numbers.length == 0) {
             return 0;
