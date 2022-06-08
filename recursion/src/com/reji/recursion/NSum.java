@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * return set of `n` numbers that can add to the given `sum` from the given set of numbers
  */
-public class NAddersProblem {
+public class NSum {
     public static void main(String[] args){
         int sum = 150;
         int[] numbers = new int[]{10, 140, 120, 30, 45, 45, 60, 10, 10, 10, 10, 10};
