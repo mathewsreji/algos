@@ -15,4 +15,4 @@ This code contains a self-driven snake and ladder game. It can run multiple game
 - **Player** : Blueprint class for a player
 - **GameContext** - this represents an instance of a game and is a `Runnable` thread. You can run multiple contexts representing multiple games going on in parallel.
 
-Author - Reji Mathews
+Author - [Reji Mathews](https://www.linkedin.com/in/reji-mathews-40a9a231/)
