@@ -34,7 +34,7 @@ public class PictureRotation {
         }
 
         int temp = 0;// xPos = 0, yPos = 0;
-        for(int offset = 0; offset < (data.length/2) + 1; offset++) {
+        for(int offset = 0; offset < size-1; offset++) {
 
             temp = matrix[0][offset]; //top left corner
 
