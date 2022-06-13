@@ -2,7 +2,7 @@ package com.reji.game.square;
 
 import com.reji.game.exceptions.InvalidPositionManipulatorException;
 
-public class Ladder implements SquareItem {
+public class Ladder implements SquareRelocator {
 
     private int sourcePos;
     private final int relocationCount;
@@ -19,7 +19,7 @@ public class Ladder implements SquareItem {
     /**
      * returns target position to which this ladder can promote you
      */
-    public int relocationStepCount() {
+    public int getRelocationStepCount() {
         System.out.println("Viola! Player got promoted by  " + relocationCount + "steps");
         return relocationCount;
     }

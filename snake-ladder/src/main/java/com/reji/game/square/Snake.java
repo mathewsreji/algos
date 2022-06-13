@@ -4,7 +4,7 @@ import com.reji.game.exceptions.InvalidPositionManipulatorException;
 import lombok.Getter;
 
 @Getter
-public class Snake implements SquareItem {
+public class Snake implements SquareRelocator {
 
     private int sourcePos;
     private final int relocationCount;
@@ -21,7 +21,7 @@ public class Snake implements SquareItem {
     /**
      * returns target position to which this snake can de-mote you
      */
-    public int relocationStepCount() {
+    public int getRelocationStepCount() {
         return relocationCount;
     }
 }

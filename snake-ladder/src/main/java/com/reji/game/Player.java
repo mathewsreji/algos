@@ -4,5 +4,5 @@ public interface Player {
     /**
      * player makes a move
      */
-    void play();
+    int play();
 }
