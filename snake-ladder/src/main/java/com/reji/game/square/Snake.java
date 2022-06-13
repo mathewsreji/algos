@@ -1,6 +1,6 @@
 package com.reji.game.square;
 
-import com.reji.game.exceptions.InvalidPositionManipulatorException;
+import com.reji.game.exceptions.InvalidSquareRelocatorException;
 import lombok.Getter;
 
 @Getter
@@ -11,7 +11,7 @@ public class Snake implements SquareRelocator {
 
     public Snake(int sourcePos, int relocationCount) {
         if(relocationCount >= 0) {
-            throw new InvalidPositionManipulatorException("Snake should always take player backward");
+            throw new InvalidSquareRelocatorException("Snake should always take player backward");
         }
         this.sourcePos = sourcePos;
         this.relocationCount = relocationCount;

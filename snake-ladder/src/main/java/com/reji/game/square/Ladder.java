@@ -1,6 +1,6 @@
 package com.reji.game.square;
 
-import com.reji.game.exceptions.InvalidPositionManipulatorException;
+import com.reji.game.exceptions.InvalidSquareRelocatorException;
 
 public class Ladder implements SquareRelocator {
 
@@ -9,7 +9,7 @@ public class Ladder implements SquareRelocator {
 
     public Ladder(int sourcePos, int relocationCount) {
         if(relocationCount <= 0) {
-            throw new InvalidPositionManipulatorException("Ladder should always take player forward");
+            throw new InvalidSquareRelocatorException("Ladder should always take player forward");
         }
         this.sourcePos = sourcePos;
         this.relocationCount = relocationCount;
