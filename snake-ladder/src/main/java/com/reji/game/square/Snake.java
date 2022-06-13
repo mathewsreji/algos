@@ -1,29 +1,27 @@
-package com.reji.game.posmovers;
+package com.reji.game.square;
 
 import com.reji.game.exceptions.InvalidPositionManipulatorException;
 import lombok.Getter;
-import lombok.Setter;
 
 @Getter
-@Setter
-public class Snake implements PosManipulator {
+public class Snake implements SquareItem {
 
     private int sourcePos;
-    private int targetPos;
+    private final int relocationCount;
 
-    public Snake(int sourcePos, int targetPos) {
-        if(targetPos >= sourcePos) {
+    public Snake(int sourcePos, int relocationCount) {
+        if(relocationCount >= 0) {
             throw new InvalidPositionManipulatorException("Snake should always take player backward");
         }
         this.sourcePos = sourcePos;
-        this.targetPos = targetPos;
+        this.relocationCount = relocationCount;
     }
 
     @Override
     /**
      * returns target position to which this snake can de-mote you
      */
-    public int getTargetPosition() {
-        return targetPos;
+    public int relocationStepCount() {
+        return relocationCount;
     }
 }
